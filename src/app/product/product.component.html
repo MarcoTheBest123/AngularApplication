@@ -1,0 +1,39 @@
+<div class="productBlock">
+  <div class="productSubBlock">
+    <div class="productData">
+      <h2 class="productName">{{ prodotto?.nome }} - Custom Color</h2>
+      <p class="productSubName">Mug / 123</p>
+      <p class="productDescription">{{ prodotto?.descrizione }}</p>
+      <h3 class="colorTitle">COLOR OPTIONS</h3>
+      <div class="colorBlock">
+        <button class="colorButton" [ngClass]="{ 'selected': selectedColor === color }" [style.background-color]="color" *ngFor="let color of colors" (click)="selectedColor = color"></button>
+      </div>
+      <p class="productPrice">{{ prodotto?.prezzo }}€</p>
+      <button class="add-to-cart" (click)="addToCart()">Add to cart</button>
+    </div>
+    <app-product-preview class="productView" [color]="selectedColor" *ngIf="prodotto?.nome === 'Coffee Mug'"></app-product-preview>
+    <app-small-cup-preview class="productView" [color]="selectedColor" *ngIf="prodotto?.nome === 'Coffee Cup'"></app-small-cup-preview>
+    <app-huawei-cover-preview class="productView" [color]="selectedColor" *ngIf="prodotto?.nome === 'Huawei Cover'"></app-huawei-cover-preview>
+    <app-laptop-preview class="productView" [color]="selectedColor" *ngIf="prodotto?.nome === 'Lenovo Laptop'"></app-laptop-preview>
+  </div>
+</div>
+
+
+<div class="similarBlock">
+
+  <h1 class="similarProductsTitle">Similar Products</h1>
+
+  <div class="scrollProducts">
+    <div *ngFor="let prodotto of prodottiSimili" class="products">
+      <a [routerLink]="['/products/', prodotto.nome]" class="LinkProd">
+        <div>
+          <img [src]="prodotto.foto" class="prod-image">
+          <p class="nome-prod">{{ prodotto.nome }}</p>
+          <p class="prod-descrizione">{{ prodotto.descrizione | cutSentences }}</p>
+        </div>
+      </a>
+    </div>
+    </div>
+</div>
+
+

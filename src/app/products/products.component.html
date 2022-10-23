@@ -1,0 +1,16 @@
+<div class="prodBlock">
+
+  <input [(ngModel)]="ricerca" type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." id="searchBar" aria-label="Search">
+
+  <div *ngFor="let prodotto of prodotti! | filterProducts:ricerca:'nome'" class="products">
+    <a [routerLink]="['/products/', prodotto.nome]" class="LinkProd">
+      <div>
+        <img [src]="prodotto.foto" class="prod-image">
+        <p class="nome-prod">{{ prodotto.nome }}</p>
+        <p class="prod-descrizione" >{{ prodotto.descrizione | cutSentences }}</p>
+        <p class="prod-prezzo">{{ prodotto.prezzo }}€</p>
+      </div>
+    </a>
+  </div>
+</div>
+

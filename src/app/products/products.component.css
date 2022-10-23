@@ -1,0 +1,65 @@
+.products{
+  width: 27%;
+  height: 50%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 20px;
+  position: relative;
+  display: inline-flex;
+}
+
+.immagine{
+  background-image: url(../dati/images/laptop.jpg);
+  background-repeat: no-repeat;
+  width: 70%;
+
+}
+
+#searchBar{
+  width: 70%;
+  margin-top: 2%;
+  margin-left: 15%;
+}
+
+.prodLink{
+  text-decoration: none;
+  color: black;
+}
+
+.prodBlock{
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.prod-image{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.nome-prod{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 3%;
+  font-size: large;
+}
+
+.prod-descrizione{
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: justify;
+  font-size: small;
+}
+
+.prod-prezzo{
+  text-align: center;
+  font-weight: bold;
+}
+
+.LinkProd{
+  text-decoration: none;
+  color: black;
+}

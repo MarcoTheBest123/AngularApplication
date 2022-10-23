@@ -1,0 +1,88 @@
+.noCart{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12%;
+  margin-bottom: 12%;
+}
+
+.cart-product{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 20px;
+  display: inline-flex;
+}
+
+.cart-image{
+  width: 15%;
+  height: auto;
+  margin-left: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  position: relative;
+  border-radius: 15px;
+}
+
+.product-name{
+  float: left;
+  margin-top: 1%;
+  margin-left: 1%;
+  width: 20%;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.product-description{
+  float: left;
+  margin-left: -20%;
+  margin-right: 15%;
+  margin-top: 4%;
+  font-size: 15px;
+}
+
+.product-price{
+  float: left;
+  margin-top: 7%;
+  margin-left: -69%;
+}
+
+.buttonBlock{
+  width: 100%;
+  margin-top: 10%;
+  height: auto;
+  float: left;
+  margin-bottom: 10%;
+}
+
+.goToCheckOut{
+  float: left;
+  margin-left: 35%;
+  background-color: #FFC107;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.goToCheckOut:hover{
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.clearCart{
+  float: right;
+  margin-right: 35%;
+  background-color: #FFC107;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.clearCart:hover{
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+

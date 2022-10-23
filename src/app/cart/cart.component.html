@@ -1,0 +1,13 @@
+<h1 *ngIf="products.length == 0" class="noCart">You don't have any products in your cart</h1>
+
+<div *ngFor="let product of products" class="cart-product">
+  <img [src]="product.foto" class="cart-image">
+  <p class="product-name">{{ product.nome }}</p>
+  <p class="product-description">{{ product.descrizione | cartCutSentences }}...</p>
+  <p class="product-price">{{ product.prezzo }}€</p>
+</div>
+
+<div class="buttonBlock">
+  <button (click)="goToCheckout()" *ngIf="products.length > 0" class="goToCheckOut">Chechout</button>
+  <button (click)="clear()" *ngIf="products.length > 0" class="clearCart">Clear cart</button>
+</div>

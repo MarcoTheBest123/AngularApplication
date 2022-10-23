@@ -1,0 +1,24 @@
+.logo{
+  height: 40px;
+  width: 60px;
+  background-image: url(../dati/images/Logo.png);
+  background-repeat: no-repeat;
+}
+#home{
+  margin-left: 30%;
+}
+
+#products{
+  margin-left: 20%;
+}
+
+#cart{
+  margin-left: 30%;
+}
+
+#login:hover{
+  border: 1px solid #FFC107;
+  color: #FFC107;
+  background-color: transparent;
+}
+

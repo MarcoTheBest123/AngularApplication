@@ -1,0 +1,75 @@
+.sfondo{
+  height: 650px;
+  background-image: url(../dati/images/sofondo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.homeTitle{
+  padding-top: 200px;
+}
+
+.Title{
+  font-weight: bold;
+  float: left;
+  padding-left: 40%;
+  color: white;
+}
+
+.titleLogo{
+  height: 40px;
+  width: 60px;
+  padding-right: 44.3%;
+  margin-top: 2px;
+  float: right;
+  background-image: url(../dati/images/Logo.png);
+  background-repeat: no-repeat;
+}
+
+.homeBlock{
+  height: 450px;
+}
+
+.aboutSite{
+  margin-top: 5%;
+  width: 35%;
+  height: 90%;
+  background-color: #FFC107;
+}
+
+#aboutSite{
+  margin-left: 15%;
+}
+
+.aboutTitle{
+  padding-top: 17%;
+  padding-left: 5%;
+}
+
+.aboutText{
+  text-align: justify;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 20%;
+}
+
+.aboutImage{
+  height: 75%;
+  width: 40%;
+  margin-left: 47%;
+  margin-top: -25%;
+  background-image: url(../dati/images/about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@-webkit-keyframes fade-right-out {
+  0% {
+    left: -35%;
+  }
+  100% {
+    left: 35%;
+  }
+}
+

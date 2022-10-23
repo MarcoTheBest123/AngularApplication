@@ -1,0 +1,28 @@
+<div class="loginBlock">
+    <h3 class="loginTitle">Log-in</h3>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate="">
+      <div class="form-floating">
+        <input formControlName="email" type="email" class="form-control" id="email" required="">
+        <label for="email" class="input-name">Email address</label>
+
+        <div class="help-block" *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched">
+          Email not valid.
+        </div>
+      </div>
+
+      <div class="form-floating">
+        <input formControlName="password" type="password" class="form-control" id="password" required="">
+        <label for="floatingPassword" class="input-name">Password</label>
+
+        <div class="help-block" *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+          Password not valid.
+        </div>
+      </div>
+
+      <div class="link"><a routerLink="/signup" routerLinkActive="active" class="linkLogin"><p>You don't have an account?</p></a></div>
+
+      <button class="submit" (click)="logged()" [disabled]="!loginForm.valid">Log-in</button>
+    </form>
+
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../auth.service';
 import { CartService } from '../cart.service';
 import { Prodotto } from '../dati/product.data';
 import { ProductServiceService } from '../product-service.service';
@@ -27,7 +28,8 @@ export class ProductComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute,
               private productService: ProductServiceService,
               private router: Router,
-              private cartService: CartService) {
+              private cartService: CartService,
+              private authService: AuthService) {
 
     this.subscription = route.params.subscribe(params => {
       const { nome } = params
@@ -46,8 +48,13 @@ export class ProductComponent implements OnInit, OnDestroy {
   }
 
   addToCart(){
-    this.cartService.addToCart(this.prodotto!)
-    window.alert("This product has been added to your cart!")
+    if(this.authService.isLogged === true){
+      this.cartService.addToCart(this.prodotto!)
+      window.alert("This product has been added to your cart!")
+    }
+    else{
+      this.router.navigate(["/login"])
+    }
   }
 
 }

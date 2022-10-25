@@ -7,7 +7,7 @@
   <p class="product-price">{{ product.prezzo }}€</p>
 </div>
 
-<div class="buttonBlock">
-  <button (click)="goToCheckout()" *ngIf="products.length > 0" class="goToCheckOut">Chechout</button>
-  <button (click)="clear()" *ngIf="products.length > 0" class="clearCart">Clear cart</button>
+<div class="buttonBlock" *ngIf="products.length > 0">
+  <button (click)="goToCheckout()" class="goToCheckOut">Chechout</button>
+  <button (click)="clear()" class="clearCart">Clear cart</button>
 </div>
